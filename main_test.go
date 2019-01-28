@@ -14,8 +14,8 @@ func TestMultiply(t *testing.T) {
 	t.Parallel()
 	var mapD = []multiplyTest{
 		{10, 20, 200},
-		{10, 20, 200},
-		{10, 20, 200},
+		{100, -20, -2000},
+		{-10, -20, 200},
 	}
 
 

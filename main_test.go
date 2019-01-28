@@ -1,9 +1,8 @@
-package main
+package awesomeProject
 
 import (
-	"testing"
-	"gotest.tools/assert"
-	"fmt"
+"testing"
+"gotest.tools/assert"
 )
 
 type multiplyTest struct{
@@ -12,7 +11,6 @@ type multiplyTest struct{
 
 
 func TestMultiply(t *testing.T) {
-	println(Multiply(100,10))
 	t.Parallel()
 	var mapD = []multiplyTest{
 		{10, 20, 200},
@@ -23,10 +21,10 @@ func TestMultiply(t *testing.T) {
 
 	var val int
 	for i := 0; i < len(mapD); i++ {
-		println(len(mapD))
-		val = Multiply(mapD[i].x, mapD[i].y)
-		assert.Equal(t,val, mapD[i].a,fmt.Printf("Multiply returned an unexpected value %i", val))
+		var x = mapD[i].x
+		var y = mapD[i].y
+		val = Multiply(x, y)
+		assert.Equal(t,val, mapD[i].a,"Failed on multiply")
 	}
 
 }
-
